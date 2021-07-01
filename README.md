@@ -7,6 +7,7 @@ To be edited by Axarva and Ayush:p
 By axarva
 
 ## Build Instructions
+<<<<<<< HEAD
 Dependencies for setting up build environment-
 - libuuid
 - libfuse
@@ -33,6 +34,9 @@ as root to build limine and echFS utils
 
 To build the kernel itself run `make` in project's root.
 Run the kernel with `make run`
+=======
+By clawbhaiya
+>>>>>>> 6b7d477fbbcfa6496561ce74d564487e40f794c6
 
 ## Contributing
 By axarva :p lol
