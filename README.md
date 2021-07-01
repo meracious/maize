@@ -18,7 +18,7 @@ Dependencies for setting up build environment-
 - libfuse
 - pkgconfig
   These are available on all distros.
-  For more instrcutions see [echFS GitHub page](https://github.com/echfs/echfs)
+  For more instructions see [echFS GitHub page](https://github.com/echfs/echfs)
 
 Programs required-
 
