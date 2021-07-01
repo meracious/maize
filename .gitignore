@@ -1,0 +1,4 @@
+*.o
+image.hdd
+maize.elf
+limine/limine-install
