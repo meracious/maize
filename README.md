@@ -12,7 +12,7 @@ It probably will never be ready for daily use in a productive system (although i
 
 ## Build Instructions
 
-Dependencies for setting up build environment-
+Dependencies for setting up build environment:
 
 - libuuid
 - libfuse
@@ -20,7 +20,7 @@ Dependencies for setting up build environment-
   These are available on all distros.
   For more instructions see [echFS GitHub page](https://github.com/echfs/echfs)
 
-Programs required-
+Programs required:
 
 - GNU Make
 - QEMU
