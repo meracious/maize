@@ -7,7 +7,7 @@ A 64-bit kernel by hobbyists.
 
 Maize is a project in it's infancy, created by 3 people as a hobby while learning C and C++.
 It probably will never be a kernel ready for daily use in a productive system (although if
-it ever becomes one, we will be pleasantly surprized), and is intended solely as a hobby and learning project.
+it ever becomes one, we will be pleasantly surprised), and is intended solely as a hobby and learning project.
 
 
 ## Build Instructions
