@@ -60,13 +60,13 @@ struct stivale2_struct_tag_cmdline {
 
 #define STIVALE2_STRUCT_TAG_MEMMAP_ID 0x2187f79e8612de07
 
-#define STIVALE2_MMAP_USABLE                 1
-#define STIVALE2_MMAP_RESERVED               2
-#define STIVALE2_MMAP_ACPI_RECLAIMABLE       3
-#define STIVALE2_MMAP_ACPI_NVS               4
-#define STIVALE2_MMAP_BAD_MEMORY             5
+#define STIVALE2_MMAP_USABLE 1
+#define STIVALE2_MMAP_RESERVED 2
+#define STIVALE2_MMAP_ACPI_RECLAIMABLE 3
+#define STIVALE2_MMAP_ACPI_NVS 4
+#define STIVALE2_MMAP_BAD_MEMORY 5
 #define STIVALE2_MMAP_BOOTLOADER_RECLAIMABLE 0x1000
-#define STIVALE2_MMAP_KERNEL_AND_MODULES     0x1001
+#define STIVALE2_MMAP_KERNEL_AND_MODULES 0x1001
 
 struct stivale2_mmap_entry {
     uint64_t base;
@@ -92,13 +92,13 @@ struct stivale2_struct_tag_framebuffer {
     uint16_t framebuffer_height;
     uint16_t framebuffer_pitch;
     uint16_t framebuffer_bpp;
-    uint8_t  memory_model;
-    uint8_t  red_mask_size;
-    uint8_t  red_mask_shift;
-    uint8_t  green_mask_size;
-    uint8_t  green_mask_shift;
-    uint8_t  blue_mask_size;
-    uint8_t  blue_mask_shift;
+    uint8_t memory_model;
+    uint8_t red_mask_size;
+    uint8_t red_mask_shift;
+    uint8_t green_mask_size;
+    uint8_t green_mask_shift;
+    uint8_t blue_mask_size;
+    uint8_t blue_mask_shift;
 } __attribute__((__packed__));
 
 #define STIVALE2_STRUCT_TAG_EDID_ID 0x968609d7af96b845
@@ -106,7 +106,7 @@ struct stivale2_struct_tag_framebuffer {
 struct stivale2_struct_tag_edid {
     struct stivale2_tag tag;
     uint64_t edid_size;
-    uint8_t  edid_information[];
+    uint8_t edid_information[];
 } __attribute__((__packed__));
 
 #define STIVALE2_STRUCT_TAG_FB_MTRR_ID 0x6bc1a78ebe871172
@@ -219,6 +219,6 @@ struct stivale2_struct_vmap {
     uint64_t addr;
 } __attribute__((__packed__));
 
-void *stivale2_get_tag(struct stivale2_struct *stivale2_struct, uint64_t id);
+void* stivale2_get_tag(struct stivale2_struct* stivale2_struct, uint64_t id);
 
 #endif
