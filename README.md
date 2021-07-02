@@ -9,16 +9,19 @@ Maize is a project in it's infancy, created by 3 people as a hobby while learnin
 It probably will never be a kernel ready for daily use in a productive system (although if
 it ever becomes one, we will be pleasantly surprised), and is intended solely as a hobby and learning project.
 
-
 ## Build Instructions
+
+### Dependencies
 
 Dependencies for setting up build environment:
 
 - libuuid
 - libfuse
 - pkgconfig
-  These are available on all distros.
-  For more instructions see [echFS GitHub page](https://github.com/echfs/echfs)
+
+These are available on all distros.
+
+For more instructions see [echFS GitHub page](https://github.com/echfs/echfs)
 
 Programs required:
 
@@ -28,23 +31,37 @@ Programs required:
 - NASM
 - Parted
 
-Clone this repository with:
+### Installation
+
+Clone this repository:
 
 ```
 git clone --recurse-submodules https://github.com/meracious/maize.git
 ```
 
-To compile the project, run:
+Move to the cloned repository:
+
+```
+cd maize
+```
+
+Run the following command as root to build limine and echFS utils:
 
 ```
 make setup
 ```
 
-as root to build limine and echFS utils
+Build the kernel:
 
-To build the kernel itself run `make` in project's root.
+```
+make
+```
 
-Run the kernel with `make run`.
+Run the kernel with qemu:
+
+```
+make run
+```
 
 ## Contributing
 
