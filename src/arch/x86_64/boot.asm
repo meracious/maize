@@ -2,7 +2,7 @@
 ; This file is a part of Maize Kernel
 
 ; Stivale header
-section .stivale2hdr 
+section .stivale2hdr
 stivale2hdr:
   .entry_point: dq 0
   .stack: dq stack.top
@@ -42,6 +42,6 @@ _start:
 
 loop:
   cli           ; block interrupts
-  hlt          ; halt the system
+  hlt           ; halt the system
   jmp $         ; loop infinitely
 
