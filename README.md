@@ -31,35 +31,35 @@ Programs required:
 - NASM
 - Parted
 
-### Installation
+### Building
 
 Clone this repository:
 
-```
+```shell
 git clone --recurse-submodules https://github.com/meracious/maize.git
 ```
 
 Move to the cloned repository:
 
-```
+```shell
 cd maize
 ```
 
 Run the following command as root to build limine and echFS utils:
 
-```
+```shell
 make setup
 ```
 
 Build the kernel:
 
-```
+```shell
 make
 ```
 
 Run the kernel with qemu:
 
-```
+```shell
 make run
 ```
 
