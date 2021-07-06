@@ -21,8 +21,9 @@ OFILES = $(CFILES:.c=.o) $(ASMFILES:.asm=.o)
 
 TARGET = maize.elf
 IMAGE = image.hdd
+FONT = scripts/zap-vga16.psf
 
-.PHONY: clean all
+.PHONY: clean all setup
 
 $(IMAGE): $(TARGET)
 	@echo PARTED:: $(IMAGE)
@@ -39,9 +40,13 @@ $(IMAGE): $(TARGET)
 	@echfs-utils -g -p0 $(IMAGE) import limine/limine.sys limine.sys
 	@echo DONE!!
 
-$(TARGET): $(OFILES)
+$(TARGET): $(OFILES) font.o
 	@echo LD:: $(TARGET)
-	@$(CC) $(LDINTERNALFLAGS) $(OFILES) -o $@
+	@$(CC) $(LDINTERNALFLAGS) font.o $(OFILES) -o $@
+
+font.o: $(FONT)
+	@echo OBJCOPY:: $(FONT)
+	@objcopy -O elf64-x86-64 -B i386 -I binary $(FONT) font.o
 
 %.o: %.c
 	@echo CC:: $@
@@ -53,7 +58,7 @@ $(TARGET): $(OFILES)
 
 clean:
 	@echo CLEAN::
-	@rm $(OFILES) $(TARGET) $(IMAGE)
+	@rm $(OFILES) font.o $(TARGET) $(IMAGE)
 
 run:
 	@echo RUN::
