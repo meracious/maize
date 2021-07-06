@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wextra -Wall -O2 -pipe
+CFLAGS = -Wextra -Wall -O2 -pipe -fstack-protector
 INTERNALCFLAGS :=	\
 			-I src/include/	\
 			-ffreestanding	\
