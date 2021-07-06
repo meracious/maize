@@ -1,9 +1,9 @@
 // This file is a part of Maize Kernel
 // Wrote by Ayush Yadav(clawbhaiya)
-#include "drivers/framebuffer.h"
-#include "drivers/tty/psf_parser.h"
-#include "drivers/tty/tty.h"
-#include "init/stivale2.h"
+#include <drivers/framebuffer.h>
+#include <drivers/tty/psf_parser.h>
+#include <drivers/tty/tty.h>
+#include <init/stivale2.h>
 
 void kmain(struct stivale2_struct* bootinfo) {
     init_framebuffer(bootinfo);

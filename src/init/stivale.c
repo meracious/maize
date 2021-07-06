@@ -1,5 +1,5 @@
+#include <init/stivale2.h>
 #include <stddef.h>
-#include "init/stivale2.h"
 
 /* function name: stivale2_get_tag
  * arguments: stivale2_struct*, uint64_t id
