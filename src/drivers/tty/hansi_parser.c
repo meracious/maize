@@ -4,8 +4,8 @@ Hobby ANSI Parser(HANSIP) is forked from VTConsole, made by
 https://github.com/sleepy-monax HANSIP is a modified version of VTConsole. But
 instead of a terminal, it is a ANSI Parser only.
 */
-#include "drivers/tty/hansi_parser.h"
-#include "drivers/tty/tty.h"
+#include <drivers/tty/hansi_parser.h>
+#include <drivers/tty/tty.h>
 
 hansi_parser g_parser = {.state = HTERM_ESC,
                          .index = 0};  // global parser object
