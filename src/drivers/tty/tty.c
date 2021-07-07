@@ -1,5 +1,6 @@
 #include <drivers/framebuffer.h>
 #include <drivers/tty/font.h>
+#include <drivers/tty/hansi_parser.h>
 #include <drivers/tty/tty.h>
 
 fb_info_t* fb = NULL;
@@ -104,7 +105,7 @@ void tty_putchar_raw(char c) {
 }
 
 void tty_putchar(char c) {
-    tty_putchar_raw(c);
+    hansi_handler(c);
 }
 
 void tty_puts(char* str) {
@@ -112,4 +113,12 @@ void tty_puts(char* str) {
         tty_putchar(*str);
         str++;
     }
+}
+
+void set_currentBg(uint32_t color) {
+    currentBg = color;
+}
+
+void set_currentFg(uint32_t color) {
+    currentFg = color;
 }
