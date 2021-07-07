@@ -70,4 +70,4 @@ Open up a PR on this repository. To discuss stuff with us, contact us via email.
 ## In Action
 
 ![image](https://user-images.githubusercontent.com/65955464/124554454-9ba70c00-de53-11eb-8e3f-b1ab7ab899eb.png)
-
+![image](https://raw.githubusercontent.com/meracious/maize/main/pics/fetch.png)
