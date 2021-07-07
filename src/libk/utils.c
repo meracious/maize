@@ -1,5 +1,5 @@
 #include <libk/stdio.h>
-#include <libk/utility.h>
+#include <libk/utils.h>
 
 void fetch() {
     printf(

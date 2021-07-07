@@ -2,7 +2,7 @@
 // Wrote by Ayush Yadav(clawbhaiya)
 #include <drivers/framebuffer.h>
 #include <drivers/tty/tty.h>
-#include <libk/utility.h>
+#include <libk/utils.h>
 
 void kmain(struct stivale2_struct* bootinfo) {
     init_framebuffer(bootinfo);
