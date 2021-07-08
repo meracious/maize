@@ -81,22 +81,26 @@ void tty_paint_cell(cell_t cell) {
 }
 
 void tty_putchar_raw(char c) {
-    if (c == '\n') {
-        cx = 0;
-        cy++;
-    } else if (c == '\r')
-        cx = 0;
-    else if (c == '\t')
-        cx = (cx - (cx % 8)) + 8;
-
-    else if (c == '\b') {
-        cx--;
-        tty_putchar_raw(' ');
-        cx--;
-    } else {
-        cell_t cell = {.c = c, .fg = currentFg, .bg = currentBg};
-        tty_paint_cell(cell);
-        cx += 1;
+    switch (c) {
+        case '\n':
+            cx = 0;
+            cy++;
+            break;
+        case '\r':
+            cx = 0;
+            break;
+        case '\t':
+            cx = (cx - (cx % 8)) + 8;
+            break;
+        case '\b':
+            cx--;
+            tty_putchar_raw(' ');
+            cx--;
+            break;
+        default:
+            cell_t cell = {.c = c, .fg = currentFg, .bg = currentBg};
+            tty_paint_cell(cell);
+            cx += 1;
     }
     if (cx >= fb->width / GLYPH_WIDTH) {
         cx = 0;
