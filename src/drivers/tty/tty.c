@@ -87,7 +87,7 @@ void tty_putchar_raw(char c) {
             cx = 0;
             break;
         case '\t':
-            cx = (cx - (cx % 8)) + 8;
+            cx = cx - (cx % 8) + 8;
             break;
         case '\b':
             cx--;
