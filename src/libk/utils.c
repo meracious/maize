@@ -1,7 +1,8 @@
 #include <libk/stdio.h>
 #include <libk/utils.h>
 
-void fetch() {
+void fetch()
+{
     printf(
         " __  __ \n\
 |  \\/  |____ Kernel: Maize Kernel\n\
