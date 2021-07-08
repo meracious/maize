@@ -60,18 +60,15 @@ void init_tty(struct stivale2_struct* bootinfo) {
 
 void tty_paint_cell(cell_t cell) {
     uint8_t iy, ix;
-    // paint the background of cell
     for (iy = 0; iy < 8; iy++) {
         for (ix = 0; ix < 8; ix++) {
+            // paint the background of cell
             if ((font[128][iy] >> ix) & 1) {
                 fb_plot_pixel(ix + cx * GLYPH_WIDTH, iy + cy * GLYPH_HEIGHT,
                               cell.bg);
             }
-        }
-    }
-    // paint the printable character
-    for (iy = 0; iy < 8; iy++) {
-        for (ix = 0; ix < 8; ix++) {
+
+            // paint the foreground of cell
             if ((font[(uint8_t)cell.c][iy] >> ix) & 1) {
                 fb_plot_pixel(ix + cx * GLYPH_WIDTH, iy + cy * GLYPH_HEIGHT,
                               cell.fg);
