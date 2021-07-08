@@ -104,9 +104,11 @@ void tty_putchar_raw(char c)
         cx--;
         break;
     default:
+    {
         cell_t cell = {.c = c, .fg = currentFg, .bg = currentBg};
         tty_paint_cell(cell);
         cx += 1;
+    }
     }
     if (cx >= fb->width / GLYPH_WIDTH)
     {
