@@ -9,21 +9,21 @@ Maize is a project in it's infancy, created by 3 people as a hobby while learnin
 It probably will never be a kernel ready for daily use in a productive system (although if
 it ever becomes one, we will be pleasantly surprised), and is intended solely as a hobby and learning project.
 
+![image](https://user-images.githubusercontent.com/65955464/124764901-1571ef00-df53-11eb-8960-c5c13602c6c3.png)
+
 ## Build Instructions
 
 ### Dependencies
 
-Dependencies for setting up build environment:
+#### For Build environment:
 
 - libuuid
 - libfuse
 - pkgconfig
 
-These are available on all distros.
-
 For more instructions see [echFS GitHub page](https://github.com/echfs/echfs)
 
-Programs required:
+#### For Build:
 
 - GNU Make
 - QEMU
@@ -66,7 +66,3 @@ make run
 ## Contributing
 
 Open up a PR on this repository. To discuss stuff with us, contact us via email.
-
-## In Action
-
-![image](https://user-images.githubusercontent.com/65955464/124764901-1571ef00-df53-11eb-8960-c5c13602c6c3.png)
