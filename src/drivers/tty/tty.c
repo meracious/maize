@@ -105,8 +105,7 @@ void tty_putchar_raw(char c)
         break;
     default:
     {
-        cell_t cell = {.c = c, .fg = currentFg, .bg = currentBg};
-        tty_paint_cell(cell);
+        tty_paint_cell((cell_t){.c = c, .fg = currentFg, .bg = currentBg});
         cx += 1;
     }
     }
