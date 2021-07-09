@@ -14,7 +14,7 @@ void init_framebuffer(struct stivale2_struct *bootinfo)
     struct stivale2_struct_tag_framebuffer *fb =
         (struct stivale2_struct_tag_framebuffer *)stivale2_get_tag(
             bootinfo, STIVALE2_STRUCT_TAG_FRAMEBUFFER_ID);
-    fb_info.address = (uint32_t *)(uint64_t)fb->framebuffer_addr;
+    fb_info.address = (uint32_t *)fb->framebuffer_addr;
     fb_info.width = fb->framebuffer_width;
     fb_info.height = fb->framebuffer_height;
     fb_info.bpp = fb->framebuffer_bpp;
