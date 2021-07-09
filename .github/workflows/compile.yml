@@ -2,21 +2,25 @@ name: Compile
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - run: git submodule update --init --recursive 
-    - name: Install dependencies
-      run: sudo apt install nasm libfuse-dev 
-    - name: Setup
-      run: sudo make setup
-    - name: Make
-      run: make
+      - uses: actions/checkout@v2
+
+      - name: Recurse submodules
+        run: git submodule update --init --recursive
+
+      - name: Install dependencies
+        run: sudo apt install nasm libfuse-dev
+
+      - name: Setup build dependencies
+        run: sudo make setup
+
+      - name: Build
+        run: make
