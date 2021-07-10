@@ -2,16 +2,11 @@
 #include <libk/stdio.h>
 #include <libk/string.h>
 
-void putchar(char c)
-{
-    tty_putchar(c);
-}
-
 void puts(const char *str)
 {
     while (*str != 0)
     {
-        putchar(*str);
+        tty_putchar(*str);
         str++;
     }
 }
@@ -138,7 +133,7 @@ int printf(char *fmt, ...)
 {
     va_list args;
     va_start(args, fmt);
-    __vsprintf__(fmt, args, putchar, puts);
+    __vsprintf__(fmt, args, tty_putchar, puts);
     va_end(args);
     return 0;
 }
