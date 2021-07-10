@@ -47,73 +47,71 @@ int __vsprintf__(char *fmt,
                 break;
             case 'x':
                 fmt++;
-                if (*fmt == 'l')
+                switch (*fmt)
                 {
+                case 'l':
                     unsigned_long = va_arg(args, uint64_t);
                     utoa(unsigned_long, str, 16);
                     puts_func(str);
-                }
-                else if (*fmt == 'i')
-                {
+                    break;
+                case 'i':
                     unsigned_int = va_arg(args, uint32_t);
                     utoa((uint64_t)unsigned_int, str, 16);
                     puts_func(str);
-                }
-                else if (*fmt == 's')
-                {
+                    break;
+                case 's':
                     unsigned_short = va_arg(args, int);
                     utoa((uint64_t)unsigned_short, str, 16);
                     puts_func(str);
-                }
-                else if (*fmt == 'd')
-                {
+                    break;
+                case 'd':
                     integer = va_arg(args, int);
                     itoa(integer, str, 16);
                     puts_func(str);
-                }
-                else if (*fmt == 'c')
-                {
+                    break;
+                case 'c':
                     character = va_arg(args, int);
                     itoa((int)character, str, 16);
                     puts_func(str);
-                }
-                else if (*fmt == 'h')
-                {
+                    break;
+                case 'h':
                     unsigned_char = va_arg(args, int);
                     utoa((uint64_t)unsigned_char, str, 16);
                     puts_func(str);
-                }
-                else
+                    break;
+                default:
                     putchar_func(*fmt);
+                    break;
+                }
                 break;
             case 'u':
                 fmt++;
-                if (*fmt == 'l')
+                switch (*fmt)
                 {
+                case 'l':
                     unsigned_long = va_arg(args, uint64_t);
                     utoa(unsigned_long, str, 10);
                     puts_func(str);
-                }
-                else if (*fmt == 'i')
-                {
+                    break;
+                case 'i':
                     unsigned_int = va_arg(args, uint32_t);
                     utoa((uint64_t)unsigned_int, str, 10);
                     puts_func(str);
-                }
-                else if (*fmt == 's')
-                {
+                    break;
+                case 's':
                     unsigned_short = va_arg(args, int);
                     utoa((uint64_t)unsigned_short, str, 10);
                     puts_func(str);
-                }
-                else if (*fmt == 'h')
-                {
+                    break;
+                case 'h':
                     unsigned_char = va_arg(args, int);
                     utoa((uint64_t)unsigned_char, str, 10);
                     puts_func(str);
-                }
-                else
+                    break;
+                default:
                     putchar_func(*fmt);
+                    break;
+                }
                 break;
             default:
                 putchar_func(*fmt);
