@@ -10,14 +10,14 @@
 #include <stdbool.h>
 
 typedef struct {
-  int value;
-  bool empty;
+    int value;
+    bool empty;
 } ansi_args;
 
 typedef struct {
-  int state;
-  int index;
-  ansi_args args[MAX_ARGS];
+    int state;
+    int index;
+    ansi_args args[MAX_ARGS];
 } hansi_parser;
 
 void hansi_handler(char c);
