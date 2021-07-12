@@ -1,6 +1,6 @@
+.cache
 *.o
 *.elf
 *.hdd
 *.iso
-
 limine/limine-install
