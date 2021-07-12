@@ -1,0 +1,12 @@
+/usr/bin/gcc
+-Wall
+-O2
+-pipe
+-fstack-protector
+-Isrc/include/
+-ffreestanding
+-mno-red-zone
+-fno-pic
+-fpie
+-mgeneral-regs-only
+-fno-exceptions
