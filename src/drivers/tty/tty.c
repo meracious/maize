@@ -68,7 +68,7 @@ void tty_paint_cell(cell_t cell)
         for (ix = 0; ix < 8; ix++)
         {
             // paint the background of cell
-            if ((font[256][iy] >> ix) & 1)
+            if ((font[128][iy] >> ix) & 1)
             {
                 fb_plot_pixel(ix + cx * GLYPH_WIDTH, iy + cy * GLYPH_HEIGHT,
                     cell.bg);
