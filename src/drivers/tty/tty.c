@@ -142,7 +142,7 @@ void tty_putchar(char c)
 }
 
 /* function name: tty_puts
- * arguments: char
+ * arguments: char*
  * returns: none
  */
 void tty_puts(char *str)
