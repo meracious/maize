@@ -10,6 +10,10 @@ uint32_t colors[16];
 
 uint32_t currentFg, currentBg;
 
+/* function name: init_colors
+ * arguments: uint32_t, uint32_t, uint32_t, uint32_t, uint32_t, uint32_t, uint32_t, uint32_t, uint32_t, uint32_t, uint32_t, uint32_t, uint32_t, uint32_t, uint32_t, uint32_t
+ * returns: none
+ */
 void init_colors(uint32_t black,
     uint32_t red,
     uint32_t green,
@@ -52,6 +56,10 @@ void init_colors(uint32_t black,
     fb_clear(currentBg);
 }
 
+/* function name: init_tty
+ * arguments: stivale2_struct*
+ * returns: none
+ */
 void init_tty(struct stivale2_struct *bootinfo)
 {
     init_framebuffer(bootinfo);
@@ -60,6 +68,10 @@ void init_tty(struct stivale2_struct *bootinfo)
     cy = 0;
 }
 
+/* function name: tty_paint_cell
+ * arguments: cell_t
+ * returns: none
+ */
 void tty_paint_cell(cell_t cell)
 {
     uint8_t iy, ix;
@@ -84,6 +96,10 @@ void tty_paint_cell(cell_t cell)
     }
 }
 
+/* function name: tty_putchar_raw
+ * arguments: char
+ * returns: none
+ */
 void tty_putchar_raw(char c)
 {
     switch (c)
@@ -116,11 +132,19 @@ void tty_putchar_raw(char c)
     }
 }
 
+/* function name: tty_putchar
+ * arguments: char
+ * returns: none
+ */
 void tty_putchar(char c)
 {
     hansi_handler(c);
 }
 
+/* function name: tty_puts
+ * arguments: char
+ * returns: none
+ */
 void tty_puts(char *str)
 {
     while (*str != 0)
@@ -130,11 +154,19 @@ void tty_puts(char *str)
     }
 }
 
+/* function name: set_currentBg
+ * arguments: uint32_t
+ * returns: none
+ */
 void set_currentBg(uint32_t color)
 {
     currentBg = color;
 }
 
+/* function name: set_currentFg
+ * arguments: uint32_t
+ * returns: none
+ */
 void set_currentFg(uint32_t color)
 {
     currentFg = color;
