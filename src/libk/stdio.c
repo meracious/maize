@@ -2,6 +2,11 @@
 #include <libk/stdio.h>
 #include <libk/string.h>
 
+void putchar(char c)
+{
+    tty_putchar(c);
+}
+
 void puts(const char *str)
 {
     while (*str != 0)
