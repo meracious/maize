@@ -1,6 +1,10 @@
 #include <libk/stdio.h>
 #include <libk/utils.h>
 
+/* function name: fetch
+ * arguments: nothing
+ * returns: nothing
+ */
 void fetch()
 {
     printf(
