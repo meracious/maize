@@ -38,6 +38,10 @@ void fb_plot_pixel(uint32_t x_pos, uint32_t y_pos, uint32_t color)
     *(uint32_t *)(x_pos + y_pos * fb_info.width + fb_info.address) = color;
 }
 
+/* function name: fb_clear
+ * arguments: uint32_t
+ * returns: nothing
+ */
 void fb_clear(uint32_t color)
 {
     for (size_t i = 0; i < fb_info.width * fb_info.height; i++)
