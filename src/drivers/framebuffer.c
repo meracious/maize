@@ -30,8 +30,8 @@ fb_info_t *get_fb_info()
 }
 
 /* function name: fb_plot_pixel
- * arguments: unit32_t x position, uint32_t y position, uitn32_t color code of
- * pixel returns: nothing
+ * arguments: unit32_t x position, uint32_t y position, uitn32_t color code of pixel
+ * returns: nothing
  */
 void fb_plot_pixel(uint32_t x_pos, uint32_t y_pos, uint32_t color)
 {
