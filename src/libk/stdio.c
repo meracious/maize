@@ -2,11 +2,19 @@
 #include <libk/stdio.h>
 #include <libk/string.h>
 
+/* function name: putchar
+ * arguments: char
+ * returns: none
+ */
 void putchar(char c)
 {
     tty_putchar(c);
 }
 
+/* function name: puts
+ * arguments: const char*
+ * returns: none
+ */
 void puts(const char *str)
 {
     while (*str != 0)
@@ -16,6 +24,10 @@ void puts(const char *str)
     }
 }
 
+/* function name: __vsprintf__
+ * arguments: char *, va_list, void (*putchar_func)(char), void(*puts_func)(const char*)
+ * returns: 0 if it succeeds
+ */
 int __vsprintf__(char *fmt,
     va_list args,
     void (*putchar_func)(char c),
@@ -132,6 +144,10 @@ int __vsprintf__(char *fmt,
     return 0;
 }
 
+/* function name: printf
+ * arguments: char *, ...
+ * returns: 0 if it succeeds
+ */
 int printf(char *fmt, ...)
 {
     va_list args;
