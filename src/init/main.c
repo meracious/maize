@@ -1,5 +1,3 @@
-// This file is a part of Maize Kernel
-// Wrote by Ayush Yadav(clawbhaiya)
 #include <drivers/tty/tty.h>
 #include <libk/utils.h>
 

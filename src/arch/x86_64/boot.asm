@@ -1,6 +1,3 @@
-; Wrote by Ayush Yadav(clawbhaiya) on 01/07/2021
-; This file is a part of Maize Kernel
-
 ; Stivale header
 section .stivale2hdr
 stivale2hdr:
