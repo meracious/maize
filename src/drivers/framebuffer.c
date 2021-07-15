@@ -20,7 +20,7 @@ void init_framebuffer(struct stivale2_struct *bootinfo)
     fb_info.bpp = fb->framebuffer_bpp;
 }
 
-/* function name: fb_get_info
+/* function name: get_fb_info
  * arguments: nothing
  * returns: struct fb_info_t
  */
