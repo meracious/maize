@@ -5,7 +5,7 @@
 
 ## About
 
-The Maize kernel is a project in it's infancy and is intended solely as a hobby and learning project.
+The Maize kernel is a project in its infancy and is intended solely as a hobby and learning project.
 
 ## In Action
 
@@ -21,7 +21,7 @@ The Maize kernel is a project in it's infancy and is intended solely as a hobby 
 - libfuse
 - pkgconfig
 
-##### Installation (run as root):
+#### Installation (run as root):
 
 Debian based distributions:
 
