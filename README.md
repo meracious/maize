@@ -1,19 +1,19 @@
 <div align="center">
-<h1>maize</h1>
-A 64-bit kernel by hobbyists.
+  <h1>maize</h1>
+  <p>A 64-bit kernel by hobbyists.</p>
 </div>
 
 ## About
 
-Maize is a project in it's infancy, created by 3 people as a hobby while learning C and C++.
-It probably will never be a kernel ready for daily use in a productive system (although if
-it ever becomes one, we will be pleasantly surprised), and is intended solely as a hobby and learning project.
+The Maize kernel is a project in it's infancy and is intended solely as a hobby and learning project.
+
+## In Action
 
 ![image](https://user-images.githubusercontent.com/65955464/124764901-1571ef00-df53-11eb-8960-c5c13602c6c3.png)
 
 ## Build Instructions
 
-### Dependencies
+### Dependencies:
 
 #### For Build environment:
 
@@ -21,7 +21,13 @@ it ever becomes one, we will be pleasantly surprised), and is intended solely as
 - libfuse
 - pkgconfig
 
-For more instructions see [echFS GitHub page](https://github.com/echfs/echfs)
+##### Installation (run as root):
+
+Debian based distributions:
+
+```shell
+apt install uuid-dev libfuse-dev pkg-config
+```
 
 #### For Build:
 
@@ -65,4 +71,4 @@ make run
 
 ## Contributing
 
-Open up a PR on this repository. To discuss stuff with us, contact us via email.
+Open up a PR on this repository.
