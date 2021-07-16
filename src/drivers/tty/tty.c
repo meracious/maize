@@ -2,7 +2,6 @@
 #include <drivers/tty/font.h>
 #include <drivers/tty/hansi_parser.h>
 #include <drivers/tty/tty.h>
-#include <stdint.h>
 
 fb_info_t *fb = NULL;
 
