@@ -2,6 +2,7 @@
 #include <drivers/tty/font.h>
 #include <drivers/tty/hansi_parser.h>
 #include <drivers/tty/tty.h>
+#include <stdint.h>
 
 fb_info_t *fb = NULL;
 
@@ -53,6 +54,7 @@ void init_colors(uint32_t black,
 
     currentBg = colors[0];
     currentFg = colors[7];
+
     fb_clear(currentBg);
 }
 
@@ -82,15 +84,16 @@ void tty_paint_cell(cell_t cell)
     {
         for (ix = 0; ix < 8; ix++)
         {
+            uint32_t x_pos = ix + cx * GLYPH_WIDTH;
+            uint32_t y_pos = iy + cy * GLYPH_HEIGHT;
+
             // paint the background of cell
-            fb_plot_pixel(ix + cx * GLYPH_WIDTH, iy + cy * GLYPH_HEIGHT,
-                cell.bg);
+            fb_plot_pixel(x_pos, y_pos, cell.bg);
 
             // paint the foreground of cell
             if ((font[(uint8_t)cell.c][iy] >> ix) & 1)
             {
-                fb_plot_pixel(ix + cx * GLYPH_WIDTH, iy + cy * GLYPH_HEIGHT,
-                    cell.fg);
+                fb_plot_pixel(x_pos, y_pos, cell.fg);
             }
         }
     }
