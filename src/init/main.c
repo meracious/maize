@@ -7,6 +7,8 @@
  */
 void kmain(struct stivale2_struct *bootinfo)
 {
+    init_arg_parser(bootinfo);
     init_tty(bootinfo);
     fetch();
+    print_args();
 }

@@ -6,18 +6,21 @@
 #define PSF1_MAGIC0 0x36
 #define PSF1_MAGIC1 0x04
 
-typedef struct {
+typedef struct
+{
     uint8_t magic[2];
     uint8_t mode;
     uint8_t height;
 } psf1_header;
 
-typedef struct {
-    psf1_header* header;
-    void* glyphs;
+typedef struct
+{
+    psf1_header *header;
+    void *glyphs;
 } psf1_font;
 
 void init_psf();
-psf1_font* get_font();
+psf1_font *get_font();
+void psf_putchar(char c, uint64_t xoff, uint64_t yoff);
 
 #endif
