@@ -9,7 +9,7 @@ The Maize kernel is a project in its infancy and is intended solely as a hobby a
 
 ## In Action
 
-![image](https://user-images.githubusercontent.com/65955464/124764901-1571ef00-df53-11eb-8960-c5c13602c6c3.png)
+![image](https://user-images.githubusercontent.com/65955464/126135004-62a893c7-cb04-4b04-ae52-61b4eb4bd6aa.png)
 
 ## Build Instructions
 
