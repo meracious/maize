@@ -9,12 +9,14 @@
 
 #include <stdbool.h>
 
-typedef struct {
+typedef struct
+{
     int value;
     bool empty;
 } ansi_args;
 
-typedef struct {
+typedef struct
+{
     int state;
     int index;
     ansi_args args[MAX_ARGS];
