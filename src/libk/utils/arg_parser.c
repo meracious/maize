@@ -37,4 +37,5 @@ void print_args()
     {
         printf("%s ", kernel_arguments[i]);
     }
+    printf("\n");
 }
