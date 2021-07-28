@@ -1,7 +1,7 @@
-#include <drivers/framebuffer.h>
-#include <init/stivale2.h>
-#include <stddef.h>
-#include <stdint.h>
+#include "drivers/framebuffer.h"
+#include "init/stivale2.h"
+#include "stddef.h"
+#include "stdint.h"
 
 fb_info_t fb_info;
 

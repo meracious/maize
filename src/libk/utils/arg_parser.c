@@ -1,7 +1,7 @@
-#include <init/stivale2.h>
-#include <libk/stdio.h>
-#include <libk/string.h>
-#include <libk/utils.h>
+#include "init/stivale2.h"
+#include "libk/stdio.h"
+#include "libk/string.h"
+#include "libk/utils.h"
 
 char *kernel_arguments[128];
 int kernel_argc = 0;

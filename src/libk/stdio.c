@@ -1,6 +1,6 @@
-#include <drivers/tty/tty.h>
-#include <libk/stdio.h>
-#include <libk/string.h>
+#include "drivers/tty/tty.h"
+#include "libk/stdio.h"
+#include "libk/string.h"
 
 /* function name: putchar
  * arguments: char

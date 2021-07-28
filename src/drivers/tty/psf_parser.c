@@ -1,6 +1,6 @@
-#include <drivers/framebuffer.h>
-#include <drivers/tty/psf_parser.h>
-#include <stddef.h>
+#include "drivers/framebuffer.h"
+#include "drivers/tty/psf_parser.h"
+#include "stddef.h"
 
 extern uint32_t _binary_scripts_zap_vga16_psf_start;
 extern uint32_t _binary_scripts_zap_vga16_psf_end;

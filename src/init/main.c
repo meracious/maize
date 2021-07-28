@@ -1,5 +1,5 @@
-#include <drivers/tty/tty.h>
-#include <libk/utils.h>
+#include "drivers/tty/tty.h"
+#include "libk/utils.h"
 
 /* function name: kmain
  * arguments: stivale2_struct*
