@@ -32,12 +32,12 @@ $(IMAGE): $(TARGET)
 	@parted -s $(IMAGE) mkpart primary 2048s 100%
 	@echo ECHFS:: $(IMAGE)
 	@echfs-utils -g -p0 $(IMAGE) quick-format 512
-	@echfs-utils -g -p0 $(IMAGE) import scripts/limine.cfg limine.cfg
-	@echfs-utils -g -p0 $(IMAGE) import $(TARGET) $(TARGET)
+	@echfs-utils -g -p0 $(IMAGE) import scripts/limine.cfg boot/limine.cfg
+	@echfs-utils -g -p0 $(IMAGE) import $(TARGET) boot/$(TARGET)
 	@echo LIMINE:: $(IMAGE)
 	@./limine/limine-install $(IMAGE)
 	@echo ECHFS:: $(IMAGE)
-	@echfs-utils -g -p0 $(IMAGE) import limine/limine.sys limine.sys
+	@echfs-utils -g -p0 $(IMAGE) import limine/limine.sys boot/limine.sys
 	@echo DONE!!
 
 $(TARGET): $(OFILES) font.o
